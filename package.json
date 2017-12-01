@@ -1,0 +1,27 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "A project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorColetoBueno/node-mongodb.git"
+  },
+  "author": "Igor Bueno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorColetoBueno/node-mongodb/issues"
+  },
+  "homepage": "https://github.com/IgorColetoBueno/node-mongodb#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "mongoose": "^4.13.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
