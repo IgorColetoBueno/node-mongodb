@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
-var db = mongoose.connect('mongodb://localhost/library').connection;
+var db = mongoose.connect('mongodb://localhost/library',
+    {
+        useMongoClient:true
+
+    }).connection;
 
 db.on('open', function () {
     console.log('MongoDB is connected');
