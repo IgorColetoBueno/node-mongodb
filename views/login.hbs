@@ -3,16 +3,16 @@
         <h4 class="text-center">Login</h4>
     </div>
     <div class="panel-body">
-            <form action="">
-        <div class="form-group">
-            <input type="text" name="username" class="form-control" placeholder="Username">
-        </div>
-        <div class="form-group">
-            <input type="text" name="password" class="form-control" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Entrar" class="btn btn-primary center-block btn-block">
-        </div>
-    </form>
+        <form action="/users/signin" method="POST">
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="text" name="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Signin" class="btn btn-primary center-block btn-block">
+            </div>
+        </form>
     </div>
 </section>

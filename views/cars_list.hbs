@@ -3,7 +3,7 @@
         <h4 class="text-center">List of cars</h4>
     </div>
     <div class="panel-body">
-        <table class="table table-bordered table-responsive table-condensed">
+        <table class="table table-bordered">
             <thead>
                 <th class="text-center">ID</th>
                 <th class="text-center">Driver name</th>
@@ -13,20 +13,36 @@
             <tbody>
                 {{#each cars}}
                 <tr>
-                    <td class="text-center">{{_id}}</td>
-                    <td class="text-left">{{driver_name}}</td>
-                    <td class="text-center">{{status}}</td>
-                    <td>
-                        <a href="/cars/edit/{{_id}}" class="btn btn-info">
-                            <span class="glyphicon-edit"></span>
-                        </a>
-                        <form action="/cars/{{_id}}" method="POST">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit">
-                                <span class="glyphicon-trash"></span>
-                            </button>
-                        </form>
-                    </td>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <td class="text-center">{{_id}}</td>
+                            </div>
+                            <div class="col-md-4">
+                                <td class="text-left">{{driver_name}}</td>
+                            </div>
+                            <div class="col-md-2">
+                                <td class="text-center">{{status}}</td>
+                            </div>
+                            <div class="col-md-3">
+                                <td class="text-center" style="margin: 3%">
+                                    <div class="pull-left" style="margin-left:20% ">
+                                        <a href="/cars/edit/{{_id}}" class="btn btn-info" >
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="pull-rigth" style="margin-right:20%">
+                                        <form action="/cars/{{_id}}" method="POST">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button class="btn btn-danger" type="submit">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </div>
+                        </div>
+                    </div>
                 </tr>
                 {{/each}}
             </tbody>
